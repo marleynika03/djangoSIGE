@@ -7,11 +7,11 @@ from djangosige.configs import DEBUG
 
 app_name = 'djangosige.apps.base'
 urlpatterns = [
-    path('', views.IndexView, name='index'),
+    path('', views.IndexView.as_view(), name='index'),
 ]
 
 if DEBUG:
     urlpatterns += [
-        path('404/$', views.handler404),
-        path('500/$', views.handler500),
+        path('404/', views.handler404),
+        path('500/', views.handler500),
     ]
