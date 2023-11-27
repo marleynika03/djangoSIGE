@@ -16,6 +16,7 @@ from datetime import datetime
 
 
 class IndexView(TemplateView):
+        template_name = r"base\index.html"
 
         def get_context_data(self, **kwargs):
             context = super(IndexView, self).get_context_data(**kwargs)
@@ -77,8 +78,7 @@ class IndexView(TemplateView):
                 context['saldo'] = '0,00'
 
             
-            template = loader.get_template('index.html')
-            return HttpResponse(template.render({}, request, context))
+            return context
 
 
 def handler404(request):

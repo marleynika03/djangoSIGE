@@ -5,7 +5,7 @@ from . import views
 
 from djangosige.configs import DEBUG
 
-app_name = 'djangosige.apps.base'
+app_name = 'base'
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
 ]

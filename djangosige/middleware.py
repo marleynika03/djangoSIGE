@@ -27,4 +27,3 @@ class LoginRequiredMiddleware(MiddlewareMixin):
             if url.match(request.path):
                 return None
 
-        return redirect('login:loginview')
